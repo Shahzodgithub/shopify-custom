@@ -1,0 +1,45 @@
+<div class="max-w-md">
+    <div class="text-5xl font-bold my-4">
+        {{ section.settings.title}}
+    </div>
+    <div class="text-base md:text-xl leading-normal">
+        {{ section.settings.subtitle }}
+    </div>
+    <div class="my-4">
+        <a href="{{ section.settings.back_url }}" class="px-4 py-2 inline text-base font-medium shadow bg-green-600 hover:bg-green-800 text-white border-rad rounded-md">{{ section.settings.back_title }}</a>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Template 404",
+  "tag": "section",
+  "class": "flex items-center justify-center text-center py-7 h-screen",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "404",
+      "label": "404 Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "the page you are looking for not found",
+      "label": "404 subtitle"
+    },
+    {
+      "type": "text",
+      "id": "back_title",
+      "default": "Back to home",
+      "label": "Back title"
+    },
+    {
+      "type": "text",
+      "id": "back_url",
+      "default": "/",
+      "label": "Back url"
+    }
+  ]
+}
+{% endschema %}
